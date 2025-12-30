@@ -1,5 +1,7 @@
 export default {
-  fetch() {
-    return new Response("OK");
-  }
+  async fetch(request, env, ctx) {
+    return new Response("OK from src/index.js", {
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    });
+  },
 };
