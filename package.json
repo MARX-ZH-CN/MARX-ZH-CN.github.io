@@ -1,7 +1,12 @@
 {
   "name": "mlread-zh-cn",
-  "private": true
+  "private": true,
   "scripts": {
-    "build": "echo \"Static site, no build required.\""
+    "build": "echo \"Static site – no build required.\"",
+    "deploy": "echo \"Use.\""
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
   }
 }
