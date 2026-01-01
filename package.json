@@ -1,4 +1,5 @@
 {
   "name": "mlread-zh-cn",
-  "private": true
+  "private": true,
+main = "src/index.ts"
 }
