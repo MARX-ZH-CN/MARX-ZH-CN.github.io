@@ -1,8 +1,47 @@
 {
   "name": "mlread-zh-cn",
   "private": true,
-   "main":"src/index.ts",
-"scripts": {
-"build": "tsc && vitepress build docs"
+  "version": "1.0.0",
+  "description": "Edge function for Cloudflare Workers and AliCloud ESA",
+  "description": "Multi-platform edge functions and documentation",
+  "main": "src/index.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy:cloudflare": "wrangler deploy",
+    "deploy:alicloud": "npm run build && alicloud-esa deploy"
+    "dev": "wrangler dev src/index.ts",
+    "dev:pages": "vitepress dev docs",
+    "build": "tsc && vitepress build docs",
+    "build:worker": "tsc",
+    "build:pages": "vitepress build docs",
+    "preview:pages": "vitepress preview docs",
+    "deploy:worker": "wrangler deploy src/index.ts",
+    "deploy:pages": "npm run build:pages && wrangler pages deploy docs/.vitepress/dist",
+    "deploy:alicloud": "npm run build:worker && alicloud-esa deploy",
+    "deploy:all": "npm run deploy:worker && npm run deploy:pages && npm run deploy:alicloud"
+  },
+  "keywords": [
+    "edge",
+    "cloudflare",
+    "workers",
+    "pages",
+    "alicloud",
+    "esa"
+    "esa",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitepress": "^1.0.0",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {}
 }
 }
