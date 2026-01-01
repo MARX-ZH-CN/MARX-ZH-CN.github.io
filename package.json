@@ -15,7 +15,7 @@
     "build:pages": "vitepress build docs",
     "preview:pages": "vitepress preview docs",
     "deploy:worker": "wrangler deploy src/index.ts",
-    "deploy:pages": "npm run build:pages && wrangler pages deploy docs/.vitepress/dist",
+    "deploy:pages": "npm run build:pages && wrangler pages deploy docs/.vitepress/dist --project-name=your-project-name",
     "deploy:alicloud": "npm run build:worker && alicloud-esa deploy",
     "deploy:all": "npm run deploy:worker && npm run deploy:pages && npm run deploy:alicloud"
   },

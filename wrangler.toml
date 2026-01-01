@@ -2,5 +2,10 @@ name = "mlread-zh-cn"
 main = "src/index.ts"
 compatibility_date = "2025-12-29"
 
+[build]
+command = "npm run build:worker"
+
+pages_build_output_dir = "docs/.vitepress/dist"
+
 [assets]
 directory = "./docs"
