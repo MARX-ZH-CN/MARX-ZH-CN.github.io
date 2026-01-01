@@ -1,5 +1,25 @@
 {
   "name": "mlread-zh-cn",
-  "private": true,
-main = "src/index.ts"
+  "version": "1.0.0",
+  "description": "Edge function for Cloudflare Workers and AliCloud ESA",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy:cloudflare": "wrangler deploy",
+    "deploy:alicloud": "npm run build && alicloud-esa deploy"
+  },
+  "keywords": [
+    "edge",
+    "cloudflare",
+    "workers",
+    "alicloud",
+    "esa"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {}
 }
