@@ -1,0 +1,17 @@
+BODY{color:#000;background:#FFFFFF}
+P,H1,H2,H3 {margin-left:10%;margin-right:10%}
+TD P {margin-left:1%;margin-right:1%}
+.wde {margin-left:0;margin-right:0}
+TABLE{margin-left:0;margin-right:0}
+BODY,P,A,TD,OL,UL,H3,H4,FONT{font-family:Arial,Helvetica,sans-serif,"Times New Roman"}
+H1,H2,H3 {font-family:"Times New Roman",Times,serif}
+SMALL P {margin-top:0; padding-top:0; margin-bottom:0; padding-bottom:0}
+HR {text-align:center}
+SMALL HR {text-align:LEFT}
+H1,H2,H3 {font-weight:normal}
+.rzr {letter-spacing:0.2em}
+.hug {font-size:300%}
+.sma {font-size:80%}
+.bor {border-width:1; border-style:solid}
+.bordn {border-width:1; border-style:solid; border-top-style:none}
+.borup {border-width:1; border-style:solid; border-bottom-style:none}
