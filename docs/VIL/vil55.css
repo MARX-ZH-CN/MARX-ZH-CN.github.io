@@ -1,14 +1,14 @@
-BODY{color:#000;background:#FFFFFF}
-P,H1,H2,H3 {margin-left:10%;margin-right:10%}
+BODY {color:#000;background:#FFFFFF;-webkit-hyphens: auto;-moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;text-align: justify;text-justify: inter-word;margin-left:10%;margin-right:10%;font-family:Arial,Helvetica,sans-serif,"Times New Roman";}
 TD P {margin-left:1%;margin-right:1%}
 .wde {margin-left:0;margin-right:0}
 TABLE{margin-left:0;margin-right:0}
-BODY,P,A,TD,OL,UL,H3,H4,FONT{font-family:Arial,Helvetica,sans-serif,"Times New Roman"}
-H1,H2,H3 {font-family:"Times New Roman",Times,serif}
+H1,H2,H3 {font-family:"Times New Roman",Times,serif;text-align: center;font-weight:normal;}
+H1,H2 {margin-top:2em;}
 SMALL P {margin-top:0; padding-top:0; margin-bottom:0; padding-bottom:0}
 HR {text-align:center}
 SMALL HR {text-align:LEFT}
-H1,H2,H3 {font-weight:normal}
+.HEADER {font-size:80%;text-align:center;text-decoration: underline;margin-bottom:0.5em;}
+.HEADER-1 {font-size:80%;text-align:center;margin-bottom:0.5em;}
 .rzr {letter-spacing:0.2em}
 .hug {font-size:300%}
 .sma {font-size:80%}
