@@ -2,6 +2,7 @@ BODY {color:#000;background:#FFFFFF;-webkit-hyphens: auto;-moz-hyphens: auto; -m
 TD P {margin-left:1%;margin-right:1%}
 .wde {margin-left:0;margin-right:0}
 TABLE{margin-left:0;margin-right:0}
+TABLE {max-width:100%;}
 H1,H2,H3 {font-family:"Times New Roman",Times,serif;text-align: center;font-weight:normal;}
 H1,H2 {margin-top:2em;}
 SMALL P {margin-top:0; padding-top:0; margin-bottom:0; padding-bottom:0}
