@@ -21,13 +21,19 @@ export default {
     }
 
     // 其他固定前缀 → me
-    const mePrefixes = ["/marx-engels/"];
+    const mePrefixes = ["/ME/"];
     for (const p of mePrefixes) {
       if (lowerPath.startsWith(p)) {
         return fetch("https://me.19491007.xyz" + path + url.search, request);
       }
     }
 
+    const mePrefixes = ["/VIL/"];
+    for (const p of mePrefixes) {
+      if (lowerPath.startsWith(p)) {
+        return fetch("https://vil.19491007.xyz" + path + url.search, request);
+      }
+    }
 
 
     // 未命中：直接透传或返回 404
