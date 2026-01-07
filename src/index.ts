@@ -1,47 +1,36 @@
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request) {
     const url = new URL(request.url);
-    
-    // 代理路由配置
-    const proxyRoutes = {
-      '/vil': 'https://vil.19491007.xyz',
-      '/me': 'https://me.19491007.xyz',
+    const path = url.pathname;
+    const lowerPath = path.toLowerCase();
+
+    // 一级路径代理（前缀）
+    const prefixRoutes = {
+      "/vil": "https://vil.19491007.xyz",
+      "/me": "https://me.19491007.xyz",
     };
-    
-    // 精确路径匹配
-    if (proxyRoutes[url.pathname]) {
-      return fetch(proxyRoutes[url.pathname], {
-        method: request.method,
-        headers: request.headers,
-        body: request.body,
-      });
+
+    for (const prefix in prefixRoutes) {
+      if (lowerPath === prefix || lowerPath.startsWith(prefix + "/")) {
+        const target =
+          prefixRoutes[prefix] +
+          path.slice(prefix.length) +
+          url.search;
+        return fetch(target, request);
+      }
     }
-    
-    // 路径前缀匹配
-    if (url.pathname.startsWith('/MEA/')) {
-      const targetUrl = 'https://me.19491007.xyz' + url.pathname;
-      return fetch(targetUrl, request);
+
+    // 其他固定前缀 → me
+    const mePrefixes = ["/marx-engels/"];
+    for (const p of mePrefixes) {
+      if (lowerPath.startsWith(p)) {
+        return fetch("https://me.19491007.xyz" + path + url.search, request);
+      }
     }
-    
-    if (url.pathname.startsWith('/MEW/')) {
-      const targetUrl = 'https://me.19491007.xyz' + url.pathname;
-      return fetch(targetUrl, request);
-    }
-    
-    if (url.pathname.startsWith('/MEW-ZH/')) {
-      const targetUrl = 'https://me.19491007.xyz' + url.pathname;
-      return fetch(targetUrl, request);
-    }
-    
-    if (url.pathname.startsWith('/LENIN/')) {
-      const targetUrl = 'https://vil.19491007.xyz' + url.pathname;
-      return fetch(targetUrl, request);
-    }
-    
-    
-    // 其他请求返回默认响应
-    return new Response("OK from src/index.js", {
-      headers: { "content-type": "text/plain; charset=utf-8" },
-    });
+
+
+
+    // 未命中：直接透传或返回 404
+    return new Response("Not Found", { status: 404 });
   },
 };
