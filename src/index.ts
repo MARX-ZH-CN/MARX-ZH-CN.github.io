@@ -39,15 +39,15 @@ export default {
     }
 
     // 其他固定前缀 → me
-    const mePrefixes = ["/ME/"];
+    const mePrefixes = ["ME/"];
     for (const p of mePrefixes) {
       if (lowerPath.startsWith(p)) {
         return fetch("https://me.19491007.xyz" + path + url.search, request);
       }
     }
 
-    const mePrefixes = ["/VIL/"];
-    for (const p of mePrefixes) {
+    const lePrefixes = ["VIL/"];
+    for (const p of lePrefixes) {
       if (lowerPath.startsWith(p)) {
         return fetch("https://vil.19491007.xyz" + path + url.search, request);
       }
