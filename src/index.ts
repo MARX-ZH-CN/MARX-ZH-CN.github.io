@@ -3,12 +3,30 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
     const lowerPath = path.toLowerCase();
+    if (url.pathname === "/ME" || url.pathname.startsWith("/ME/")) {
+      // 把 /a 前缀剥掉
+      const newPath = url.pathname.replace(/^\/ME/, "") || "/";
+
+      const target =
+        "https://me.19491007.xyz" + newPath + url.search;
+
+      return fetch(target, request);
+    }
+    if (url.pathname === "/VIL" || url.pathname.startsWith("/VIL/")) {
+      // 把 /a 前缀剥掉
+      const newPath = url.pathname.replace(/^\/VIL/, "") || "/";
+
+      const target =
+        "https://vil.19491007.xyz" + newPath + url.search;
+      return fetch(target, request);
+    }
 
     // 一级路径代理（前缀）
     const prefixRoutes = {
       "/vil": "https://vil.19491007.xyz",
       "/me": "https://me.19491007.xyz",
     };
+
 
     for (const prefix in prefixRoutes) {
       if (lowerPath === prefix || lowerPath.startsWith(prefix + "/")) {
