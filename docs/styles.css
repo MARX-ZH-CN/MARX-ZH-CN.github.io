@@ -3,7 +3,7 @@
 .style3 {font-size: 0.75em;text-align:center;}
 .quote {font-size: 0.75em;margin: 1.5em 1px 1.5em 1px;}
 .date {font-size: 0.75em;text-align:center;}
-table {margin: 1.5em;max-width:100%;}
+table {margin: 1.5em;max-width:100vw;}
 table.quote  {font-size: 0.75em; margin: 1.5em;}
 h1,h2 {font-family: "黑体"; text-align:center;}
 h3,h4,h5,h6 {font-family: "黑体"; text-align:center;}
