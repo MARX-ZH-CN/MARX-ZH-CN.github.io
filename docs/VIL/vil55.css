@@ -16,3 +16,27 @@ SMALL HR {text-align:LEFT}
 .bor {border-width:1; border-style:solid}
 .bordn {border-width:1; border-style:solid; border-top-style:none}
 .borup {border-width:1; border-style:solid; border-bottom-style:none}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+a {
+  color: #79c0ff;  
+  text-decoration: underline;
+}
+
+a:visited {
+  color:  #0969da;
+}
+
+a:hover, a:focus {
+  color: #a3d4ff;
+  text-decoration: underline;
+}
+
+a:active {
+  color:  #ff6b6b; 
+}
+}

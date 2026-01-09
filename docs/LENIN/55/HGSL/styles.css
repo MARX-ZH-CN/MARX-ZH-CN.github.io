@@ -1,16 +1,14 @@
 
 body {
-    font-family:Baskerville,"Baskerville Old Face",Garamond,"Times New Roman",serif;
+    font-family:"Baskerville Old Face",Garamond,"Times New Roman",serif;
     line-height: 1.2;
     margin: 0;
     padding: 1em;
     font-size: 1em;
-    -webkit-hyphens: auto; /* Safari, 旧版Chrome */
-    -moz-hyphens: auto;    /* Firefox */
-    -ms-hyphens: auto;     /* 旧版Edge/IE */
-    hyphens: auto;  
-  text-align: justify;
-text-justify: inter-word; 
+-webkit-hyphens: auto;-moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;
+    text-align: justify;
+    text-justify: inter-word;
+color:#1F2937;
 }
 
 .mbppagebreak {
@@ -22,7 +20,7 @@ text-justify: inter-word;
     }
 em,i {
 font-style: italic;
-font-family: Garamond,"Baskerville Old Face","Times New Roman",serif;
+font-family:Garamond;
 }
 h1, h2 {
     margin-top: 1.5em;
@@ -36,16 +34,18 @@ h3, h4 {
     font-weight: bold;
     text-align:center;
 }
+h5 {
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    font-weight: bold;
+    font-size: 1em;
+}
 h6 {
     margin-top: 0.5em;
     margin-bottom: 0em;
     font-weight: bold;
     text-align:center;
-}
-h5 {
-    margin-top: 0.5em;
-    margin-bottom: 0em;
-    font-weight: bold;
+    font-size: 1em;
 }
 img {
     max-width: 100%;
@@ -64,6 +64,61 @@ hr {
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }}
-span[align="center"] {
-display: block;
+.remark {
+    display: block;
+    margin-left: 6.25%;
+    text-align: justify;
 }
+.addtion {
+    display: block;
+    font-size:0.9em;
+    
+}
+a {color:#2563EB;text-decoration: underline;}/*#1A0DAB;*/
+a:visited {color:#4B6CB7}
+a:hover, a:focus {color:#1E40AF;}/*#2563EB;#6B7280*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+a {
+  color: #64ABD5;
+  text-decoration: underline;
+}
+
+a:visited {
+  color:  #8597AE
+}
+
+a:hover, a:focus {
+  color: #a3d4ff;
+  text-decoration: underline;
+}
+
+a:active {
+  color:  #ff6b6b; 
+}
+h1,h2,h3,h4,h5,h6,b {
+ color:  #F0F0F0;
+}
+a b,b a {
+ color:   #64ABD5;
+  text-decoration: underline;
+}
+a:visited  b,b a:visited{
+  color:  #8597AE
+}
+
+a:hover b, a:focus b ,b a:focus, b a:hover{
+  color: #a3d4ff;
+}
+
+a:active b,b a:active {
+  color:  #ff6b6b; 
+}
+
+}
+
+
+
