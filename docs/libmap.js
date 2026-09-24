@@ -74,7 +74,7 @@ window.LIBRARY_CONFIG = [
           { id: 2, label: "Band 2: 1844 bis 1846", volume: "Band 2", dir: "/MEW/2/", citation: { year: 1957 } },
           { id: 3, label: "Band 3: 1845 bis 1846", volume: "Band 3", dir: "/MEW/3/", citation: { year: 1958 } },
           { id: 4, label: "Band 4: Mai 1846 bis März 1848", volume: "Band 4", dir: "/MEW/4/", citation: { year: 1959 } },
-          { id: 5, label: "Band 5: März bis November 1848", volume: "Band 5", dir: "/MEW/5/", citation: { year: 1959 } },
+          { id: 5, label: "Band 5: März bis November 1848", volume: "Band 5", dir: "/MEW/5/", citation: { year: 1982 } },
           { id: 6, label: "Band 6: November 1848 bis Juli 1849", volume: "Band 6", dir: "/MEW/6/", citation: { year: 1959 } },
           { id: 7, label: "Band 7: August 1849 bis Juni 1851", volume: "Band 7", dir: "/MEW/7/", citation: { year: 1982 } },
           { id: 8, label: "Band 8: August 1851 bis März 1853", volume: "Band 8", dir: "/MEW/8/", citation: { year: 1960 } },
