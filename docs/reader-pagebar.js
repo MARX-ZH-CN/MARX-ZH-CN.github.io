@@ -389,7 +389,11 @@
 
     showCopyNotice(el) {
       if (typeof window.showReaderNotice === 'function') {
-        window.showReaderNotice('Die Quellenangabe wurde in die Zwischenablage kopiert: ' + (el?.dataset.citation || '.'));
+        let notice;
+        if (this.lang.startsWith("de")) notice='Die Quellenangabe wurde in die Zwischenablage kopiert: ';
+        else if (this.lang.startsWith("zh")) notice = '引用已复制到剪贴板：';
+        else notice = 'The citation has been copied into clipboard: ';
+        window.showReaderNotice( notice + (el?.dataset.citation || '.'));
         return;
       }
       this.showFallbackNotice('Copied citation.');
